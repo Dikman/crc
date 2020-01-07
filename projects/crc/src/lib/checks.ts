@@ -1,9 +1,11 @@
-/*
- Checksums for samples were generated withhelp
-   crc24: https://github.com/latysheff/node-polycrc
-   crc32: https://crccalc.com/
+/**
+ * Checksums for samples were generated withhelp
+ *  - crc24: https://github.com/latysheff/node-polycrc
+ *  - crc32: https://crccalc.com
+ *
+ * @internal
  */
-export const checksums = [
+export const checks = [
   {
     checksum: {
       crc24: '0x24AE91',

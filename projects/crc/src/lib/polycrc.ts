@@ -1,3 +1,9 @@
+import { Converter } from './converter';
+
+/**
+ * General class to make a polynomial table for CRC calculation
+ * @internal
+ */
 export class PolyCRC {
 
   private readonly reflectedXorIn = PolyCRC.reverse(this.xorIn, this.bits);
@@ -31,19 +37,19 @@ export class PolyCRC {
     private readonly reflect: boolean
   ) {
     if (this.bits === 8 && !this.xorIn && !this.xorOut && !this.reflect) {
-      this.calculate = (str: string): ValueFormatter => {
+      this.calculate = (str: string): Converter => {
         let crc = 0;
 
         for (let i = 0; i < str.length; i++) {
           crc = this.table[crc ^ str.charCodeAt(i)];
         }
 
-        return new ValueFormatter(crc, this.bits);
+        return new Converter(crc, this.bits);
       };
     }
   }
 
-  public calculate(str: string): ValueFormatter {
+  public calculate(str: string): Converter {
     let crc: number;
 
     if (this.reflect) {
@@ -65,7 +71,7 @@ export class PolyCRC {
     }
 
     crc ^= this.xorOut;
-    return new ValueFormatter(crc >>> 0, this.bits);
+    return new Converter(crc >>> 0, this.bits);
   }
 
   private genPolyTable(): Int32Array {
@@ -94,28 +100,6 @@ export class PolyCRC {
     }
 
     return new Int32Array(table);
-  }
-
-}
-
-export class ValueFormatter {
-
-  constructor(
-    private readonly value: number,
-    private readonly bits: number
-  ) { }
-
-  public toHEX(prefix: string = '0x'): string {
-    const length = Math.max(Math.floor(this.bits / 4), 1);
-    return prefix + this.value.toString(16).toUpperCase().padStart(length, '0');
-  }
-
-  public toString(): string {
-    return this.toHEX();
-  }
-
-  public valueOf(): number {
-    return this.value;
   }
 
 }

@@ -1,8 +1,8 @@
-import { checksums } from '../checksums';
+import { checks } from '../checks';
 import { crc32 } from './crc32.helper';
 
 describe('crc32', () => {
-  for (const check of checksums) {
+  for (const check of checks) {
     const len = check.sample.length;
 
     it(`should generate a correct checksum for the fixed sample by ${len} chars`, () => {

@@ -31,18 +31,17 @@ npm install @dikman/crc
 ## API
 
 ```js
-function crc24(str: string): ValueFormatter;
+function crc24(str: string): Converter;
 ```
 
 ```js
-function crc32(str: string): ValueFormatter;
+function crc32(str: string): Converter;
 ```
 
 ```js
-interface ValueFormatter {
+interface Converter {
   public toHEX(prefix: string = '0x'): string;
-  public toString(): string;
-  public valueOf(): number;
+  public asNumber(): number;
 }
 ```
 
@@ -58,7 +57,7 @@ const checksum = crc32('hello');
 console.log(checksum.toHEX());
 // "0x3610A686"
 
-console.log(checksum.valueOf());
+console.log(checksum.asNumber());
 // 907060870
 ```
 
@@ -72,7 +71,7 @@ const checksum = crc24('hello');
 console.log(checksum.toHEX());
 // "0x47F58A"
 
-console.log(checksum.valueOf());
+console.log(checksum.asNumber());
 // 4715914
 ```
 
