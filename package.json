@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "start": "ng serve",
-    "test": "ng test",
     "build": "ng build --prod",
     "lint": "ng lint",
+    "test": "ng test",
     "e2e": "ng e2e",
-    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/greeting-app/stats-es2015.json",
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer ./dist/demo/stats-es2015.json",
     "lib:build": "ng build crc",
     "lib:watch": "ng build crc --watch",
     "lib:lint": "ng lint crc",
@@ -28,6 +28,7 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "ngx-highlightjs": "^4.0.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

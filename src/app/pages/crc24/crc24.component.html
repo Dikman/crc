@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-card-title-group>
+    <mat-card-title class="type-title">CRC 24</mat-card-title>
+    <mat-card-subtitle class="type-subtitle">helper</mat-card-subtitle>
+  </mat-card-title-group>
+
+  <mat-card-content>
+    <p>
+      <code>crc24(str)</code> calculates checksum based on 24 bits polynom.
+    </p>
+
+    <h4>Arguments</h4>
+
+    <table class="arguments-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Optional</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>str</td>
+          <td>string</td>
+          <td class="text-center"></td>
+          <td></td>
+          <td>Source string</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Example</h4>
+
+    <pre><code [highlight]="exampleCode" [languages]="['typescript']"></code></pre>
+
+    <h4>Demo</h4>
+
+    <textarea rows="6" [formControl]="exampleString"></textarea>
+    <p class="hint">{{exampleChecksum}}</p>
+  </mat-card-content>
+</mat-card>

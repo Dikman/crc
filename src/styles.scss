@@ -1,4 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~highlight.js/styles/github.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+code {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  padding: 1px 2px;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  resize: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mat-list-base {
+  padding-top: 0 !important;
+}
+
+.arguments-table {
+  background: silver;
+  border-spacing: 1px;
+  width: 100%;
+
+  th,
+  td {
+    background: white;
+    padding: 0.5em;
+  }
+}
+
+.track-race .mat-figure {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin: 0 0 0.5em;
+  }
+
+  .track-area {
+    border: 1px dashed gray;
+    flex-grow: 1;
+    width: 99%;
+  }
+}
+
+.type-title {
+  margin-bottom: 0 !important;
+}
+
+.type-subtitle {
+  margin-top: 2px !important;
+  font-style: italic;
+  color: silver;
+}
+
+.hint {
+  margin: 0;
+  color: gray;
+}
