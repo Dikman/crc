@@ -14,7 +14,7 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav [opened]="!mobile.matches" [mode]="mobile.matches ? 'over' : 'side'" [autoFocus]="true">
     <mat-nav-list>
-      <a mat-list-item *ngFor="let item of menu" routerLinkActive="active" [routerLink]="item.link">
+      <a mat-list-item *ngFor="let item of menu" routerLinkActive="mat-list-item-active" [routerLink]="item.link">
         <h3 mat-line>{{item.title || item.link}}</h3>
         <p mat-line class="type-subtitle">{{item.category}}</p>
       </a>

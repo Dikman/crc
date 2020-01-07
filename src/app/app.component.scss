@@ -26,6 +26,14 @@
   padding: 1em;
 }
 
+.mat-list-item-active h3 {
+  font-weight: 500;
+
+  &::before {
+    content: "〉";
+  }
+}
+
 @media (max-width: 599px) {
   .mat-toolbar {
     min-height: 56px;
