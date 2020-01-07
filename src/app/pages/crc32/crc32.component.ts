@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { crc32 } from '@dikman/crc';
 import { Subscription } from 'rxjs';
-import { TrimExample } from 'src/app/decorators/trim-example.decorator';
+import { TrimExample } from 'src/app/shared/decorators/trim-example.decorator';
 
 @Component({
   templateUrl: './crc32.component.html'

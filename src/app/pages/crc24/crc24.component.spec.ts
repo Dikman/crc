@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Crc24Component } from './crc24.component';
 
 describe('Crc24Component', () => {

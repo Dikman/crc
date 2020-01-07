@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { Crc32Component } from './crc32.component';
 
 describe('Crc32Component', () => {

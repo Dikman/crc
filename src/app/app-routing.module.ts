@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Crc24Component } from './pages/crc24/crc24.component';
-import { Crc32Component } from './pages/crc32/crc32.component';
 
 const routes: Routes = [
   {
     path: 'crc24',
-    component: Crc24Component
+    loadChildren: () => import('./pages/crc24/crc24.module').then(m => m.Crc24Module)
   },
   {
     path: 'crc32',
-    component: Crc32Component
+    loadChildren: () => import('./pages/crc32/crc32.module').then(m => m.Crc32Module)
   },
   {
     path: '**',
