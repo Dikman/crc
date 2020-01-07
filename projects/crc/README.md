@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@dikman/crc.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/@dikman/crc)
 [![Downloads](https://img.shields.io/npm/dt/@dikman/crc.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/@dikman/crc)
 [![Monthly Downloads](https://img.shields.io/npm/dm/@dikman/crc.svg)](https://www.npmjs.com/package/@dikman/crc)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@dikman/crc.svg)](https://bundlephobia.com/result?p=@dikman/crc)
 [![License](https://img.shields.io/npm/l/express.svg?maxAge=2592000)](/LICENSE)
 
 The library for calculating Cyclic Redundancy Check (CRC) for browser-side. The calculation is table-based. Tables are dynamically generated once per each CRC function.
