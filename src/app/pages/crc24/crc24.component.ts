@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { crc24 } from '@dikman/crc';
 import { Subscription } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { TrimExample } from 'src/app/shared/decorators/trim-example.decorator';
 
 @Component({
@@ -29,7 +30,15 @@ export class Crc24Component implements OnInit, OnDestroy {
   private exampleSubscription: Subscription;
 
   public ngOnInit(): void {
-    this.exampleSubscription = this.exampleString.valueChanges.subscribe(() => this.invalidate());
+    this.exampleSubscription = this.exampleString
+      .valueChanges
+      .pipe(
+        debounceTime(200),
+        distinctUntilChanged()
+      )
+      .subscribe(() => this.invalidate());
+
+
     this.invalidate();
   }
 
