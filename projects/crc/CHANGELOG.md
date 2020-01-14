@@ -1,3 +1,9 @@
+## 0.1.3
+
+### Features
+
+* fixed link to the homepage in README.md
+
 ## 0.1.2
 
 ### Features

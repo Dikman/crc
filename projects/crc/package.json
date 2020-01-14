@@ -1,9 +1,9 @@
 {
   "name": "@dikman/crc",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Dmitriy Kuznetsov <dmitriy.v.kuznetsov@gmail.com>",
   "description": "The library for calculating Cyclic Redundancy Check (CRC) for browser-side and nodejs-side",
-  "homepage": "https://github.com/dikman/crc/projects/crc/#readme",
+  "homepage": "https://github.com/dikman/crc/tree/master/projects/crc#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/dikman/crc.git"
