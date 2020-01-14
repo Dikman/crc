@@ -13,6 +13,7 @@
     "lib:watch": "ng build crc --watch",
     "lib:lint": "ng lint crc",
     "lib:test": "ng test crc",
+    "lib:coverage": "ng test crc --no-watch --code-coverage",
     "lib:contents": "doctoc ./projects/crc/README.md",
     "lib:docs": "cd ./projects/crc && compodoc -p tsconfig.lib.json  -n \"CRC library\" -s -o --watch --theme stripe --disablePrivate --disableProtected --disableInternal --disableLifeCycleHooks --disableSourceCode --hideGenerator -d ../../dist/docs",
     "lib:publish": "npm run lib:contents && npm run lib:build && cp ./projects/crc/CHANGELOG.md ./dist/crc/CHANGELOG.md && cd ./dist/crc && npm pack && npm publish --access public"

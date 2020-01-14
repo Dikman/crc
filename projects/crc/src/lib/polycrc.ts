@@ -12,7 +12,10 @@ export class PolyCRC {
 
   private readonly mask = ((this.msbMask - 1) << 1) | 1;
 
-  private readonly crcShift = this.bits < 8 ? 8 - this.bits : 0;
+  private readonly crcShift = 0;
+
+  // ** It needs to uncomment and replace definition before if we want to support calculating CRC8 **
+  // private readonly crcShift = this.bits < 8 ? 8 - this.bits : 0;
 
   private readonly shiftedXorIn = this.xorIn << this.crcShift;
 
@@ -36,17 +39,18 @@ export class PolyCRC {
     private readonly xorOut: number,
     private readonly reflect: boolean
   ) {
-    if (this.bits === 8 && !this.xorIn && !this.xorOut && !this.reflect) {
-      this.calculate = (str: string): Converter => {
-        let crc = 0;
-
-        for (let i = 0; i < str.length; i++) {
-          crc = this.table[crc ^ str.charCodeAt(i)];
-        }
-
-        return new Converter(crc, this.bits);
-      };
-    }
+    // ** The code below needs to uncomment if we want to support calculating CRC8 **
+    // if (this.bits === 8 && !this.xorIn && !this.xorOut && !this.reflect) {
+    //   this.calculate = (str: string): Converter => {
+    //     let crc = 0;
+    //
+    //     for (let i = 0; i < str.length; i++) {
+    //       crc = this.table[crc ^ str.charCodeAt(i)];
+    //     }
+    //
+    //     return new Converter(crc, this.bits);
+    //   };
+    // }
   }
 
   public calculate(str: string): Converter {

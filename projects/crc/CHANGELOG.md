@@ -1,3 +1,15 @@
+## 0.1.2
+
+### Features
+
+* improved test coverage up to 100%
+
+## 0.1.1
+
+### Features
+
+* improved README.md
+
 ## 0.1.0
 
 ### Features
