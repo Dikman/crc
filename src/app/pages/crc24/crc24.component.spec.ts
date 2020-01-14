@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { Crc24Component } from './crc24.component';
 
 describe('Crc24Component', () => {
@@ -7,9 +8,14 @@ describe('Crc24Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Crc24Component ]
+      declarations: [
+        Crc24Component
+      ],
+      imports: [
+        SharedModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
