@@ -33,7 +33,7 @@ export class Crc24Component implements OnInit, OnDestroy {
     this.exampleSubscription = this.exampleString
       .valueChanges
       .pipe(
-        debounceTime(200),
+        debounceTime(150),
         distinctUntilChanged()
       )
       .subscribe(() => this.invalidate());
